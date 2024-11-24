@@ -32,34 +32,39 @@ header{
     align-items: center;
     padding: 15px 5%;
     padding-left: 2%;
-    margin-right: 3%;
-    min-width: 750px;
+    margin-right: 35px;
+    display: grid;
+    grid-template-columns: 64px max-content minmax(10px, 1fr) 120px;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    grid-row-gap: 5px;
 }
 .MenuBtn, .SignBtn{
     background-color: var(--color3);
     border-width: 0; 
     cursor:pointer;
+    vertical-align: middle;
 }
 .NavBtn{
     margin-left: 5%;
     align-self: center;
+    width: max-content;
 }
 .IconFilter{
     vertical-align:middle;
     filter: invert(93%) sepia(14%) saturate(136%) hue-rotate(349deg) brightness(97%) contrast(104%);
 }
 .Profile{
-    align-self: center;
 }
 .Search{
-    margin:auto;
-    width: clamp(150px, 50%, 900px);
+    width: clamp(300px, 600px, 800px);
+    margin: auto;
 }
 #ShopSearchBtn{
+    height: 29px;
     vertical-align: middle;
 }
 #ShopSearchBar{
-    width: 80%;
+    width: 85%;
     border-radius: 15px;
     background-color: var(--color1);
     color: var(--color4);
@@ -102,32 +107,24 @@ header{
     background-color: var(--color3dark);
 }
 
-@media (max-width: 1150px){
+@media (max-width: 1202px){
     .MenuBtn{
         font-size: 0px;
     }
 }
-@media (max-width: 830px){
-    header{
-        flex-wrap: wrap;
-    }
-    .logo{
-        order: 1;
-    }
-    .NavBtn{
-        order: 2;
-    }
+@media (max-width: 1030px){
     .Search{
-        order: 5;
+        grid-column: 1/5;
+        margin: auto;
+        width: max-content;
+    }
+    #ShopSearchBar{
+        width: 60vw;
     }
     .Profile{
-        order: 3;
+        grid-row: 1/1;
+        grid-column: 4/4;
     }
-    .break {
-        flex-basis: 100%;
-        height: 0;
-        order: 4;
-      }
 }
 
 .Dock{
@@ -157,7 +154,7 @@ header{
 }
 .Shop{
     margin-top: 10px;
-    margin-right: 5%;
+    margin-right: 65px;
     margin-left: 2%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
