@@ -32,7 +32,7 @@ header{
     align-items: center;
     padding: 15px 5%;
     padding-left: 2%;
-    width: 90%;
+    margin-right: 3%;
     min-width: 750px;
 }
 .MenuBtn, .SignBtn{
@@ -107,11 +107,32 @@ header{
         font-size: 0px;
     }
 }
+@media (max-width: 830px){
+    header{
+        flex-wrap: wrap;
+    }
+    .logo{
+        order: 1;
+    }
+    .NavBtn{
+        order: 2;
+    }
+    .Search{
+        order: 5;
+    }
+    .Profile{
+        order: 3;
+    }
+    .break {
+        flex-basis: 100%;
+        height: 0;
+        order: 4;
+      }
+}
 
 .Dock{
     display: inline-block;
     background-color: var(--color1dark);
-    margin-top: 10px;
     border-radius: 7px;
 }
 .DockText{
@@ -133,4 +154,12 @@ header{
     display: inline-block;
     margin: 0px;
     color: var(--color4);
+}
+.Shop{
+    margin-top: 10px;
+    margin-right: 5%;
+    margin-left: 2%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0.3em;
 }
