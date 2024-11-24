@@ -12,7 +12,8 @@ body{
     background-color: var(--color2);
     overflow-x: hidden;
     width: 100vw;
-    height: 100vh;
+    height: max-content;
+    overflow-y: auto;
 }
 p{
     color: var(--color4);
@@ -22,8 +23,11 @@ body, input, button, p, textarea{
     font-family: "consolas", "ubuntu";
     color: var(--color1);
     font-size: 16px;
+    align-items: start;
 }
 header{
+    position: sticky;
+    top: 8px;
     margin-right: auto;
     background-color: var(--color3);
     border-radius: 40px;
@@ -107,7 +111,7 @@ header{
     background-color: var(--color3dark);
 }
 
-@media (max-width: 1202px){
+@media (max-width: 1245px){
     .MenuBtn{
         font-size: 0px;
     }
@@ -124,6 +128,14 @@ header{
     .Profile{
         grid-row: 1/1;
         grid-column: 4/4;
+    }
+    .MenuBtn{
+        font-size: 1em;
+    }
+}
+@media (max-width: 600px){
+    .MenuBtn{
+        font-size: 0px;
     }
 }
 

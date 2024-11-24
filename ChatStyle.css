@@ -1,0 +1,162 @@
+:root{
+    --color1: rgb(250, 240, 230);
+    --color1dark: hsl(30, 66.7%, 94.1%);
+    --color2: rgb(185, 180, 199);
+    --color2dark: hsl(256, 14.5%, 60%);
+    --color2darker: hsl(256, 14.5%, 55%);
+    --color3: rgb(92, 84, 112);
+    --color3dark: hsl(256, 14.3%, 30%);
+    --color4: rgb(53, 47, 68);
+}
+body{
+    background-color: var(--color2);
+    overflow-x: hidden;
+    width: 100vw;
+    height: max-content;
+    overflow: hidden;
+}
+p{
+    color: var(--color4);
+    overflow-wrap: break-word;
+}
+body, input, button, p, textarea{
+    font-family: "consolas", "ubuntu";
+    color: var(--color1);
+    font-size: 16px;
+    /* align-items: start; */
+}
+header{
+    position: sticky;
+    top: 8px;
+    margin-right: auto;
+    background-color: var(--color3);
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    padding-left: 2%;
+    margin-right: 35px;
+    display: grid;
+    grid-template-columns: 64px max-content minmax(10px, 1fr) 120px;
+    grid-template-rows: repeat(auto-fit, 1fr);
+    grid-row-gap: 5px;
+}
+.MenuBtn, .SignBtn{
+    background-color: var(--color3);
+    border-width: 0; 
+    cursor:pointer;
+    vertical-align: middle;
+}
+.NavBtn{
+    margin-left: 5%;
+    align-self: center;
+    width: max-content;
+}
+
+.Chat{
+    margin-top: 10px;
+    margin-right: 35px;
+    margin-left: 2%;
+    margin-bottom: 15px;
+    display: grid;
+    grid-template-columns: 15% 80%;
+    grid-template-rows: 80vh;
+    column-gap: 3%;
+}
+.SideBar{
+    background-color: var(--color3);
+    border-radius: 7px;
+    width: 100%;
+    height: 80%;
+    margin-bottom: 2%;
+}
+.Messages{
+    background-color: var(--color3);
+    width: 100%;
+    border-radius: 7px;
+}
+
+.IconFilter{
+    vertical-align:middle;
+    filter: invert(93%) sepia(14%) saturate(136%) hue-rotate(349deg) brightness(97%) contrast(104%);
+}
+.Search{
+    width: clamp(300px, 600px, 800px);
+    margin: auto;
+}
+#ShopSearchBtn{
+    height: 29px;
+    vertical-align: middle;
+}
+#ShopSearchBar{
+    width: 85%;
+    border-radius: 15px;
+    background-color: var(--color1);
+    color: var(--color4);
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    outline: none;
+    border-style: solid;
+    border-color: var(--color4);
+    vertical-align: middle;
+    ::placeholder{
+        opacity: 0.5;
+    }
+}
+#ShopSearchBar:focus{
+    border-color: var(--color2);
+    outline: none;
+}
+::-webkit-scrollbar{
+    width: 1.3em;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--color2dark);
+    border-radius: 100vw;
+    margin-block: 0.5em;
+    transition: background-color 1s;
+    border: 3px solid var(--color2);
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--color3);
+    border-radius: 100vw;
+    transition: background-color 1s;
+    border: 3px solid var(--color2);
+}
+::-webkit-scrollbar-track:hover{
+    background-color: var(--color2darker);
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: var(--color3dark);
+}
+
+@media (max-width: 1245px){
+    .MenuBtn{
+        font-size: 0px;
+    }
+}
+@media (max-width: 1030px){
+    .Search{
+        grid-column: 1/5;
+        margin: auto;
+        width: max-content;
+    }
+    #ShopSearchBar{
+        width: 60vw;
+    }
+    .Profile{
+        grid-row: 1/1;
+        grid-column: 4/4;
+    }
+    .MenuBtn{
+        font-size: 1em;
+    }
+}
+@media (max-width: 600px){
+    .MenuBtn{
+        font-size: 0px;
+    }
+}
