@@ -9,9 +9,10 @@
     --color4: rgb(53, 47, 68);
 }
 body{
+    zoom: 1;
     background-color: var(--color2);
     overflow-x: hidden;
-    width: 100vw;
+    width: 95vw;
     height: max-content;
     overflow-y: auto;
 }
@@ -67,8 +68,6 @@ header{
 .IconFilter{
     vertical-align:middle;
     filter: invert(93%) sepia(14%) saturate(136%) hue-rotate(349deg) brightness(97%) contrast(104%);
-}
-.Profile{
 }
 .Search{
     width: clamp(300px, 600px, 800px);
@@ -155,7 +154,7 @@ header{
     margin-right: 65px;
     margin-left: 2%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 0.3em;
 }
 
