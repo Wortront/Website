@@ -23,7 +23,6 @@ body, input, button, p, textarea{
     font-family: "consolas", "ubuntu";
     color: var(--color1);
     font-size: 16px;
-    /* align-items: start; */
 }
 header{
     position: sticky;
